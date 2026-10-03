@@ -82,7 +82,7 @@ import {
 import type { EntryRow } from '@/data/types'
 
 const meta = moduleMeta('batchrecord')
-const columns = ["批号", "产品名称", "生产工序", "投料量", "操作人", "复核人", "起始时间", "批记录状态"]
+const columns = ["批号", "产品名称", "生产工序", "投料量", "操作人", "复核人", "起始时间", "批记录状态", "物料放行结论"]
 const actions = ["提交编制", "送交复核", "归档批记录"]
 const statuses = ["待编制", "编制中", "已复核", "已归档"]
 const stats = [{"label": "待编制批记录", "value": 0}, {"label": "编制中批记录", "value": 0}, {"label": "本月归档数", "value": 0}]

@@ -35,3 +35,39 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+
+/* 状态标签 */
+.status-pill { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; white-space: nowrap; }
+.status-pill[data-status="待放行"], .status-pill[data-status="待编制"], .status-pill[data-status="待监测"],
+.status-pill[data-status="待处理"], .status-pill[data-status="待评估"], .status-pill[data-status="待验证"],
+.status-pill[data-status="待灌装"], .status-pill[data-status="待取样"], .status-pill[data-status="待确认"],
+.status-pill[data-status="待检验"], .status-pill[data-status="待留样"], .status-pill[data-status="待考察"],
+.status-pill[data-status="待启动"], .status-pill[data-status="待审计"], .status-pill[data-status="待培训"],
+.status-pill[data-status="待回顾"], .status-pill[data-status="待受理"] { background: #eef2f7; color: #475569; }
+.status-pill[data-status="已放行"], .status-pill[data-status="已复核"], .status-pill[data-status="已归档"],
+.status-pill[data-status="已达标"], .status-pill[data-status="已验证"], .status-pill[data-status="已合格"],
+.status-pill[data-status="已留样"], .status-pill[data-status="已完成"], .status-pill[data-status="已通过"],
+.status-pill[data-status="已确认"], .status-pill[data-status="已批准"], .status-pill[data-status="已回复"],
+.status-pill[data-status="已关闭"], .status-pill[data-status="已判定"] { background: #dcfce7; color: #166534; }
+.status-pill[data-status="已拒绝"], .status-pill[data-status="已冻结"], .status-pill[data-status="超标预警"],
+.status-pill[data-status="验证失败"], .status-pill[data-status="不合格"], .status-pill[data-status="未通过"],
+.status-pill[data-status="已退回"] { background: #fee2e2; color: #991b1b; }
+
+/* 状态标签页 */
+.tab-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.tab-item { border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 4px 14px; font-size: 13px; cursor: pointer; }
+.tab-item.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+/* 详情抽屉 */
+.drawer-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: flex; justify-content: flex-end; z-index: 50; }
+.drawer { width: 420px; max-width: 92vw; height: 100%; background: #fff; box-shadow: -8px 0 24px rgba(15, 23, 42, 0.18); display: flex; flex-direction: column; }
+.drawer-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.drawer-head h3 { margin: 0; font-size: 15px; }
+.drawer-body { padding: 14px 16px; overflow-y: auto; }
+.detail-list { margin: 0; }
+.detail-row { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px dashed #e7edf4; font-size: 13px; }
+.detail-row dt { color: var(--muted); margin: 0; flex: 0 0 110px; }
+.detail-row dd { margin: 0; text-align: right; word-break: break-all; }
+.report-card { margin-top: 14px; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; background: #f9fbfd; }
+.report-card h4 { margin: 0 0 6px; font-size: 13px; }
+.drawer-actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
